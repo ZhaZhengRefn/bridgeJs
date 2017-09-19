@@ -1,15 +1,7 @@
 
 /**
- * jsBridge
- * 使用方法：
- * 1.全局引用jsBridge: import jsBridge from './jsBridge'; window.jsBridge = jsBridge;
- * 2.web端调用语法: jsBridge.call('/common/getToken', {userId: 1}, function(data){ console.log(data) })
- * 3.原生端：
- *    3.1 安卓端调用语法：
- *        url规范如下：
- *        //url: "jsBridge://isApp/sect?msg=xxoo&func=window.jsBridge.emit&eventName=jsBridge_event_1472625694972"
- *        安卓端通过监听url规范如上的iframe请求，即可获参数包，在这个例子中指的是{ msg: 'xxoo' }；
- *        同时，默认webview端添加了事件的回调函数时，参数包会带有func参数与eventName。安卓端通过以eventName的值为参数，执行func的值为方法名。即可执行回调函数。
+ * bridgeJs
+ * @author: refn
  */
 const EMIT_METHOD = 'window.jsBridge.emit',
       EVENT_PREFIX = 'jsBridge_event',
